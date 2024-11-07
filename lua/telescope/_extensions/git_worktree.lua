@@ -284,8 +284,8 @@ local telescope_git_worktree = function(opts)
         local path, _ = utils.transform_path(opts, entry.path)
         return displayer {
             { entry.branch, 'TelescopeResultsIdentifier' },
-            { path },
-            { entry.sha },
+            { path, 'TelescopeResultsComment' },
+            { entry.sha, 'TelescopeResultsNumber' },
         }
     end
 
